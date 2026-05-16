@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "Documents API": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "tsx",
+        "C:\work\workspace\react-tanstack-router-app\src\generate\api\mcp\server.ts"
+      ]
+    }
+  }
+}

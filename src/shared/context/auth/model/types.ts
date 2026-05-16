@@ -1,0 +1,1 @@
+export type BroadcastMessage = 'LOGIN_SUCCESS' | 'LOGOUT';

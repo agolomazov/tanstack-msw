@@ -1,0 +1,68 @@
+{
+  "name": "react-tanstack-router-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "generate-routes": "tsr generate",
+    "watch-routes": "tsr watch",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "post-generate": "tsx scripts/post-generate.ts",
+    "generate": "kubb generate && pnpm post-generate"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "@tanstack/react-query": "^5.100.10",
+    "@tanstack/react-query-devtools": "^5.100.10",
+    "@tanstack/react-router": "^1.169.2",
+    "@tanstack/react-router-devtools": "^1.166.13",
+    "axios": "^1.16.1",
+    "broadcast-channel": "^7.3.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "tailwindcss": "^4.3.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@eslint/js": "^10.0.1",
+    "@faker-js/faker": "^10.4.0",
+    "@kubb/plugin-faker": "4.37.5",
+    "@kubb/plugin-mcp": "4.37.5",
+    "@kubb/plugin-oas": "4.37.5",
+    "@kubb/plugin-react-query": "4.37.5",
+    "@kubb/plugin-redoc": "4.37.5",
+    "@kubb/plugin-ts": "4.37.5",
+    "@kubb/plugin-zod": "4.37.5",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@rolldown/plugin-babel": "^0.2.3",
+    "@tanstack/router-cli": "^1.166.43",
+    "@tanstack/router-plugin": "^1.167.35",
+    "@types/babel__core": "^7.20.5",
+    "@types/node": "^24.12.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "glob": "^13.0.6",
+    "globals": "^17.6.0",
+    "kubb": "^3.0.259",
+    "msw": "^2.14.6",
+    "prettier": "^3.8.3",
+    "tsx": "^4.22.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.2",
+    "vite": "^8.0.12"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}

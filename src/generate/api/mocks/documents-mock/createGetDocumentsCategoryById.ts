@@ -22,7 +22,7 @@ export function createGetDocumentsCategoryByIdPathParams(
 ): GetDocumentsCategoryByIdPathParams {
   faker.seed([100]);
   return {
-    ...{ categoryId: faker.number.int({ min: 1 }) },
+    ...{ categoryId: faker.string.uuid() },
     ...(data || {}),
   };
 }

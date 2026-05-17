@@ -13,8 +13,8 @@ import type {
 } from "../../types/get-documents-category-by-id.ts";
 
 /**
- * @description Получение категории документов по ID и краткого списка документов
- * @summary Получение категории документов по ID
+ * @description Получение документов по ID категории
+ * @summary Получение документов по ID категории
  * {@link /v1/documents/categories/:categoryId}
  */
 export async function getDocumentsCategoryByIdHandler({

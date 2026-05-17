@@ -9,9 +9,9 @@ export type GetDocumentsCategoryByIdPathParams = {
   /**
    * @description ID категории документов
    * @minLength 1
-   * @type integer, int64
+   * @type string, uuid
    */
-  categoryId: number;
+  categoryId: string;
 };
 
 export type GetDocumentsCategoryByIdQueryParams = {

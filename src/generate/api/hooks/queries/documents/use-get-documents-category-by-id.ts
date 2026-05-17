@@ -47,8 +47,8 @@ export type GetDocumentsCategoryByIdQueryKey = ReturnType<
 >;
 
 /**
- * @description Получение категории документов по ID и краткого списка документов
- * @summary Получение категории документов по ID
+ * @description Получение документов по ID категории
+ * @summary Получение документов по ID категории
  * {@link /v1/documents/categories/:categoryId}
  */
 export async function getDocumentsCategoryById(
@@ -108,8 +108,8 @@ export function getDocumentsCategoryByIdQueryOptions(
 }
 
 /**
- * @description Получение категории документов по ID и краткого списка документов
- * @summary Получение категории документов по ID
+ * @description Получение документов по ID категории
+ * @summary Получение документов по ID категории
  * {@link /v1/documents/categories/:categoryId}
  */
 export function useGetDocumentsCategoryById<

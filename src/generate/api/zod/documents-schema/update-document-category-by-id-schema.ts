@@ -8,11 +8,7 @@ import { documentCategoryRequestV1Schema } from "../document-category-request-v1
 import { documentCategoryResponseV1Schema } from "../document-category-response-v1schema.ts";
 
 export const updateDocumentCategoryByIdPathParamsSchema = z.object({
-  categoryId: z.coerce
-    .number()
-    .int()
-    .min(1)
-    .describe("ID категории документов"),
+  categoryId: z.uuid().min(1).describe("ID категории документов"),
 });
 
 export type UpdateDocumentCategoryByIdPathParamsSchema = z.infer<

@@ -6,11 +6,7 @@
 import * as z from "zod";
 
 export const removeDocumentCategoryByIdPathParamsSchema = z.object({
-  categoryId: z.coerce
-    .number()
-    .int()
-    .min(1)
-    .describe("ID категории документов"),
+  categoryId: z.uuid().min(1).describe("ID категории документов"),
 });
 
 export type RemoveDocumentCategoryByIdPathParamsSchema = z.infer<

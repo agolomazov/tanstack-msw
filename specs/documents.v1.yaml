@@ -79,8 +79,8 @@ paths:
         - $ref: '#/components/parameters/sort'
       tags:
         - Documents
-      summary: Получение категории документов по ID
-      description: Получение категории документов по ID и краткого списка документов
+      summary: Получение документов по ID категории
+      description: Получение документов по ID категории
       operationId: getDocumentsCategoryById
       responses:
         '200':
@@ -233,8 +233,8 @@ components:
       description: ID категории документов
       required: true
       schema:
-        type: integer
-        format: int64
+        type: string
+        format: uuid
         minimum: 1
     documentId:
       name: documentId

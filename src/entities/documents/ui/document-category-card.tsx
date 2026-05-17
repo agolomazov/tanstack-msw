@@ -14,7 +14,8 @@ export const DocumentCategoryCard: FC<Props> = ({ id, title, countDocuments }) =
         {/* Заголовок категории с ссылкой */}
         <h3 className="text-lg font-semibold mb-2">
           <Link
-            to='/'
+            to='/documents/category/$categoryId'
+            params={{ categoryId: id }}
             className="text-gray-900 hover:text-blue-600 transition-colors duration-200 truncate block"
             title={title}
           >
@@ -45,7 +46,8 @@ export const DocumentCategoryCard: FC<Props> = ({ id, title, countDocuments }) =
 
           {/* Иконка стрелки для перехода */}
           <Link
-            to="/"
+            to='/documents/category/$categoryId'
+            params={{ categoryId: id }}
             className="w-4 h-4 text-gray-400 hover:text-blue-500 transition-colors duration-200"
             aria-label={`Перейти к категории ${title}`}
           >

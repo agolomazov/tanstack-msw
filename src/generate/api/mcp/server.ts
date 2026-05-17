@@ -63,12 +63,11 @@ server.registerTool(
 server.registerTool(
   "getDocumentsCategoryById",
   {
-    title: "Получение категории документов по ID",
-    description:
-      "Получение категории документов по ID и краткого списка документов",
+    title: "Получение документов по ID категории",
+    description: "Получение документов по ID категории",
     outputSchema: { data: getDocumentsCategoryByIdQueryResponseSchema },
     inputSchema: {
-      categoryId: z.coerce.number(),
+      categoryId: z.string(),
       params: getDocumentsCategoryByIdQueryParamsSchema,
     },
   },
@@ -84,7 +83,7 @@ server.registerTool(
     description: "Обновление категории документа по ID",
     outputSchema: { data: updateDocumentCategoryByIdMutationResponseSchema },
     inputSchema: {
-      categoryId: z.coerce.number(),
+      categoryId: z.string(),
       data: updateDocumentCategoryByIdMutationRequestSchema,
     },
   },
@@ -99,7 +98,7 @@ server.registerTool(
     title: "Удаление категории документов",
     description: "Удаление категории документов по ID",
     outputSchema: { data: removeDocumentCategoryByIdMutationResponseSchema },
-    inputSchema: { categoryId: z.coerce.number() },
+    inputSchema: { categoryId: z.string() },
   },
   async ({ categoryId }) => {
     return removeDocumentCategoryByIdHandler({ categoryId });

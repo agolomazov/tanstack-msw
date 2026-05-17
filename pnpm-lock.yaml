@@ -29,6 +29,9 @@ importers:
       broadcast-channel:
         specifier: ^7.3.0
         version: 7.3.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       react:
         specifier: ^19.2.6
         version: 19.2.6

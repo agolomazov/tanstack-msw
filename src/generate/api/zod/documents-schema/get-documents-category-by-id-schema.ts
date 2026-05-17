@@ -7,11 +7,7 @@ import * as z from "zod";
 import { documentCategoryResponseV1Schema } from "../document-category-response-v1schema.ts";
 
 export const getDocumentsCategoryByIdPathParamsSchema = z.object({
-  categoryId: z.coerce
-    .number()
-    .int()
-    .min(1)
-    .describe("ID категории документов"),
+  categoryId: z.uuid().min(1).describe("ID категории документов"),
 });
 
 export type GetDocumentsCategoryByIdPathParamsSchema = z.infer<

@@ -21,6 +21,7 @@
     "@tanstack/react-router-devtools": "^1.166.13",
     "axios": "^1.16.1",
     "broadcast-channel": "^7.3.0",
+    "clsx": "^2.1.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "tailwindcss": "^4.3.0",

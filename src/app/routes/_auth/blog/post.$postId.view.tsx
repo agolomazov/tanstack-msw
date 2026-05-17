@@ -9,7 +9,7 @@ function RouteComponent() {
 
   return (
     <div>
-      <h1>View post #{postId}</h1>
+      <h1>Просмотр страницы поста #{postId}</h1>
     </div>
   )
 }

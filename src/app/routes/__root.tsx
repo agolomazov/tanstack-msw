@@ -19,15 +19,11 @@ export const Route = createRootRouteWithContext<RouterContext>()({
  
 function Root() {
   return (
-    <html>
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <Outlet />
-        <TanstackRouterDevtools />
-        <Scripts />
-      </body>
-    </html>
+    <>
+      <HeadContent />
+      <Outlet />
+      <TanstackRouterDevtools />
+      <Scripts />
+    </>
   )
 }

@@ -9,6 +9,7 @@ import { DocumentImage } from './document-image';
 import { DocumentType } from "./document-status";
 import { FaRegCommentDots } from "react-icons/fa";
 import { Link } from "@tanstack/react-router";
+import { DocumentComments } from "./document-comments";
 
 interface Props {
   document: DocumentResponseV1;
@@ -109,6 +110,9 @@ export const Document: FC<Props> = ({
       <footer className="text-center text-sm text-gray-500 py-4 border-t border-gray-200">
         ID документа: {id || 'N/A'}
       </footer>
+
+      {/* Список комментариев к документу */}
+      <DocumentComments documentId={id} />
     </div>
   );
 }

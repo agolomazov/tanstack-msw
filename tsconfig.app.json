@@ -29,11 +29,11 @@
       "@widgets/*": ["./src/widgets/*"],
       "@shared/*": ["./src/shared/*"],
       "@entities/*": ["./src/entities/*"],
-      "@api/queries/*": ["./src/generated/api/hooks/queries/*"],
-      "@api/mutations/*": ["./src/generated/api/hooks/mutations/*"],
-      "@api/types": ["./src/generated/api/types/index.ts"],
-      "@api/zod/*": ["./src/generated/api/zod/*"],
-      "@route-tree": ["./src/generated/routes/route-tree.gen.ts"]
+      "@api-queries/*": ["./src/generate/api/hooks/queries/*"],
+      "@api/mutations/*": ["./src/generate/api/hooks/mutations/*"],
+      "@api/types": ["./src/generate/api/types/index.ts"],
+      "@api/zod/*": ["./src/generate/api/zod/*"],
+      "@route-tree": ["./src/generate/routes/route-tree.gen.ts"]
     }
   },
   "include": ["src"]

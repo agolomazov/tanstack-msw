@@ -24,10 +24,10 @@ export default defineConfig({
       '@widgets': path.resolve(__dirname, 'src/widgets'),
       '@shared': path.resolve(__dirname, 'src/shared'),
       '@entities': path.resolve(__dirname, 'src/entities'),
-      '@api/queries': path.resolve(__dirname, 'src/generated/api/hooks/queries'),
-      '@api/mutations': path.resolve(__dirname, 'src/generated/api/hooks/mutations'),
-      '@api/types': path.resolve(__dirname, 'src/generated/api/types'),
-      '@api/zod': path.resolve(__dirname, 'src/generated/api/zod'),
+      '@api-queries': path.resolve(__dirname, 'src/generate/api/hooks/queries'),
+      '@api/mutations': path.resolve(__dirname, 'src/generate/api/hooks/mutations'),
+      '@api/types': path.resolve(__dirname, 'src/generate/api/types'),
+      '@api/zod': path.resolve(__dirname, 'src/generate/api/zod'),
       '@route-tree': path.resolve(__dirname, 'src/generate/routes/route-tree.gen.ts')
     }
   }

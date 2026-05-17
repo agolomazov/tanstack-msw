@@ -8,4 +8,3 @@ export * from './ui/document-card-skeleton';
 export * from './ui/document';
 
 export { documentSearchParams } from './schemas/document-search-params';
-export { documentCategoryPathParamsSchema } from './schemas/document-category-path-params';

@@ -10,7 +10,7 @@ interface Props {
   document: DocumentMetaDtoV1;
 }
 
-export const DocumentCard: FC<Props> = ({ document: { createdBy, title, type, createdAt, updatedAt, comments  } }) => {
+export const DocumentCard: FC<Props> = ({ document: { createdBy, title, type, createdAt, updatedAt, comments, id  } }) => {
   return (
     <div
       className="bg-white rounded-lg shadow border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200"
@@ -53,7 +53,8 @@ export const DocumentCard: FC<Props> = ({ document: { createdBy, title, type, cr
 
       {/* Кнопка для перехода на страницу документа */}
       <Link
-        to="/"
+        to="/documents/$id"
+        params={{ id: String(id) }}
         className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors gap-x-2"
         aria-label={`Открыть документ "${title}"`}
       >

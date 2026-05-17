@@ -1,6 +1,7 @@
-import { getDocumentCategories, getDocumentsByCategoryId } from '@entities/documents';
+import { getDocumentCategories, getDocumentsByCategoryId, getDocumentById } from '@entities/documents';
 
 export const handlers = [
   getDocumentCategories(),
-  getDocumentsByCategoryId()
+  getDocumentsByCategoryId(),
+  getDocumentById()
 ]

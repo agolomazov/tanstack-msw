@@ -37,6 +37,7 @@ import { Route as AuthAppSettingsRouteImport } from './../../app/routes/_auth/ap
 import { Route as AuthAppDashboardRouteImport } from './../../app/routes/_auth/app/dashboard'
 import { Route as AuthPathlessLayoutBRouteImport } from './../../app/routes/_auth/_pathlessLayout.b'
 import { Route as AuthPathlessLayoutARouteImport } from './../../app/routes/_auth/_pathlessLayout.a'
+import { Route as AuthDocumentsIdIndexRouteImport } from './../../app/routes/_auth/documents/$id/index'
 import { Route as AuthPostsEditPostIdRouteImport } from './../../app/routes/_auth/posts.edit.$postId'
 import { Route as AuthDocumentsCategoryCategoryIdRouteImport } from './../../app/routes/_auth/documents/category.$categoryId'
 import { Route as AuthBlogPostIdModalRouteImport } from './../../app/routes/_auth/blog/$postId.modal'
@@ -180,6 +181,11 @@ const AuthPathlessLayoutARoute = AuthPathlessLayoutARouteImport.update({
   path: '/a',
   getParentRoute: () => AuthPathlessLayoutRoute,
 } as any)
+const AuthDocumentsIdIndexRoute = AuthDocumentsIdIndexRouteImport.update({
+  id: '/$id/',
+  path: '/$id/',
+  getParentRoute: () => AuthDocumentsRouteRoute,
+} as any)
 const AuthPostsEditPostIdRoute = AuthPostsEditPostIdRouteImport.update({
   id: '/edit/$postId',
   path: '/edit/$postId',
@@ -235,6 +241,7 @@ export interface FileRoutesByFullPath {
   '/blog/$postId/modal': typeof AuthBlogPostIdModalRoute
   '/documents/category/$categoryId': typeof AuthDocumentsCategoryCategoryIdRoute
   '/posts/edit/$postId': typeof AuthPostsEditPostIdRoute
+  '/documents/$id/': typeof AuthDocumentsIdIndexRoute
   '/blog/post/$postId/edit': typeof AuthBlogPostPostIdEditRoute
   '/blog/post/$postId/view': typeof AuthBlogPostPostIdViewRoute
 }
@@ -263,6 +270,7 @@ export interface FileRoutesByTo {
   '/blog/$postId/modal': typeof AuthBlogPostIdModalRoute
   '/documents/category/$categoryId': typeof AuthDocumentsCategoryCategoryIdRoute
   '/posts/edit/$postId': typeof AuthPostsEditPostIdRoute
+  '/documents/$id': typeof AuthDocumentsIdIndexRoute
   '/blog/post/$postId/edit': typeof AuthBlogPostPostIdEditRoute
   '/blog/post/$postId/view': typeof AuthBlogPostPostIdViewRoute
 }
@@ -299,6 +307,7 @@ export interface FileRoutesById {
   '/_auth/blog/$postId/modal': typeof AuthBlogPostIdModalRoute
   '/_auth/documents/category/$categoryId': typeof AuthDocumentsCategoryCategoryIdRoute
   '/_auth/posts/edit/$postId': typeof AuthPostsEditPostIdRoute
+  '/_auth/documents/$id/': typeof AuthDocumentsIdIndexRoute
   '/_auth/blog/post/$postId/edit': typeof AuthBlogPostPostIdEditRoute
   '/_auth/blog/post/$postId/view': typeof AuthBlogPostPostIdViewRoute
 }
@@ -332,6 +341,7 @@ export interface FileRouteTypes {
     | '/blog/$postId/modal'
     | '/documents/category/$categoryId'
     | '/posts/edit/$postId'
+    | '/documents/$id/'
     | '/blog/post/$postId/edit'
     | '/blog/post/$postId/view'
   fileRoutesByTo: FileRoutesByTo
@@ -360,6 +370,7 @@ export interface FileRouteTypes {
     | '/blog/$postId/modal'
     | '/documents/category/$categoryId'
     | '/posts/edit/$postId'
+    | '/documents/$id'
     | '/blog/post/$postId/edit'
     | '/blog/post/$postId/view'
   id:
@@ -395,6 +406,7 @@ export interface FileRouteTypes {
     | '/_auth/blog/$postId/modal'
     | '/_auth/documents/category/$categoryId'
     | '/_auth/posts/edit/$postId'
+    | '/_auth/documents/$id/'
     | '/_auth/blog/post/$postId/edit'
     | '/_auth/blog/post/$postId/view'
   fileRoutesById: FileRoutesById
@@ -603,6 +615,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthPathlessLayoutARouteImport
       parentRoute: typeof AuthPathlessLayoutRoute
     }
+    '/_auth/documents/$id/': {
+      id: '/_auth/documents/$id/'
+      path: '/$id'
+      fullPath: '/documents/$id/'
+      preLoaderRoute: typeof AuthDocumentsIdIndexRouteImport
+      parentRoute: typeof AuthDocumentsRouteRoute
+    }
     '/_auth/posts/edit/$postId': {
       id: '/_auth/posts/edit/$postId'
       path: '/edit/$postId'
@@ -678,11 +697,13 @@ const AuthBlogRouteRouteWithChildren = AuthBlogRouteRoute._addFileChildren(
 interface AuthDocumentsRouteRouteChildren {
   AuthDocumentsIndexRoute: typeof AuthDocumentsIndexRoute
   AuthDocumentsCategoryCategoryIdRoute: typeof AuthDocumentsCategoryCategoryIdRoute
+  AuthDocumentsIdIndexRoute: typeof AuthDocumentsIdIndexRoute
 }
 
 const AuthDocumentsRouteRouteChildren: AuthDocumentsRouteRouteChildren = {
   AuthDocumentsIndexRoute: AuthDocumentsIndexRoute,
   AuthDocumentsCategoryCategoryIdRoute: AuthDocumentsCategoryCategoryIdRoute,
+  AuthDocumentsIdIndexRoute: AuthDocumentsIdIndexRoute,
 }
 
 const AuthDocumentsRouteRouteWithChildren =

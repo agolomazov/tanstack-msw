@@ -7,7 +7,3 @@ export const documentSearchParams = z.object({
 });
 
 export type DocumentSearch = z.infer<typeof documentSearchParams>;
-
-export const documentCategoryPathParamsSchema = z.object({
-  categoryId: z.uuid({ version: 'v4' })
-})

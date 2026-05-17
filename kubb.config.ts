@@ -3,7 +3,7 @@ import { pluginOas } from '@kubb/plugin-oas'
 import { pluginTs } from '@kubb/plugin-ts'
 import { pluginReactQuery } from '@kubb/plugin-react-query'
 import { pluginZod } from '@kubb/plugin-zod';
-import { pluginFaker } from '@kubb/plugin-faker';
+// import { pluginFaker } from '@kubb/plugin-faker';
 import { pluginRedoc } from '@kubb/plugin-redoc';
 import { pluginMcp } from '@kubb/plugin-mcp';
 
@@ -159,26 +159,26 @@ export default defineConfig({
       operations: true,
       version: '4',
     }),
-    pluginFaker({
-      output: {
-        path: './mocks',
-        barrelType: false
-      },
-      dateType: 'string',
-      integerType: 'number',
-      seed: [100],
-      paramsCasing: 'camelcase',
-      regexGenerator: 'faker',
-      unknownType: 'any',
-      group: {
-        type: 'tag',
-        name({ group }) {
-          return `${group.toLocaleLowerCase()}-mock`;
-        },
-      },
-      dateParser: 'faker',
-      emptySchemaType: 'void',
-    }),
+    // pluginFaker({
+    //   output: {
+    //     path: './mocks',
+    //     barrelType: false
+    //   },
+    //   dateType: 'string',
+    //   integerType: 'number',
+    //   seed: [100],
+    //   paramsCasing: 'camelcase',
+    //   regexGenerator: 'faker',
+    //   unknownType: 'any',
+    //   group: {
+    //     type: 'tag',
+    //     name({ group }) {
+    //       return `${group.toLocaleLowerCase()}-mock`;
+    //     },
+    //   },
+    //   dateParser: 'faker',
+    //   emptySchemaType: 'void',
+    // }),
     pluginRedoc({
       output: { path: 'docs.html' },
     }),

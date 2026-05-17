@@ -1,7 +1,6 @@
-import { documentSearchParams } from '@pages/auth/documents/document-params';
 import { createFileRoute } from '@tanstack/react-router';
 import { useGetAllDocCategoriesV1 } from '@api-queries/documents/use-get-all-doc-categories-v1'
-import { DocumentListCategorySkeleton, DocumentListCategory } from '@entities/documents';
+import { DocumentListCategorySkeleton, DocumentListCategory, documentSearchParams } from '@entities/documents';
 import { ErrorLoadingState } from '@widgets/errors/error-loading';
 
 export const Route = createFileRoute('/_auth/documents/')({

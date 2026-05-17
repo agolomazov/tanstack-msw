@@ -1,4 +1,4 @@
-import type { DocumentCategoryListResponseV1, DocumentCategoryResponseV1 } from "src/generate/api";
+import type { DocumentCategoryListResponseV1, DocumentCategoryResponseV1, DocumentResponseV1 } from "src/generate/api";
 
 export const categoryListResponseMocks: DocumentCategoryListResponseV1 = {
   "empty": false,
@@ -160,4 +160,77 @@ export const documentsCategoryResponseMocks: DocumentCategoryResponseV1 = {
       }
     }
   ]
+}
+
+export const documentMock: DocumentResponseV1 = {
+  "id": 12345,
+  "title": "Годовой отчёт компании за 2026 год",
+  "description": "Полный финансовый отчёт с анализом ключевых показателей и стратегическими планами на следующий год.",
+  "createdAt": "2026-04-15T10:30:00.000Z",
+  "updatedAt": "2026-05-10T14:22:15.300Z",
+  "comments": 8,
+  "createdBy": {
+    "id": 789,
+    "firstName": "Елена",
+    "lastName": "Васильева",
+    "avatarUrl": "http://localhost:5173/avatars/woman.png"
+  },
+  "type": "PRIVATE",
+  "content": [
+    {
+      "id": 1,
+      "type": "header",
+      "level": "1",
+      "position": 1,
+      "value": "Годовой отчёт компании за 2026 год"
+    },
+    {
+      "id": 2,
+      "type": "paragraph",
+      "position": 2,
+      "value": "В данном отчёте представлены основные финансовые показатели компании за прошедший год, анализ рыночной позиции и планы развития на следующий период."
+    },
+    {
+      "id": 3,
+      "type": "header",
+      "level": "2",
+      "position": 3,
+      "value": "Финансовые результаты"
+    },
+    {
+      "id": 4,
+      "type": "paragraph",
+      "position": 4,
+      "value": "Выручка компании за 2026 год составила 45 000 000 рублей, что на 15 % выше показателя предыдущего года. Основные драйверы роста — расширение линейки продуктов и выход на новые рынки."
+    },
+    {
+      "id": 5,
+      "type": "image",
+      "position": 5,
+      "settings": {
+        "title": "График роста выручки",
+        "src": "http://localhost:5173/documents/graphic-1.jpg",
+        "width": 800,
+        "height": 400
+      }
+    },
+    {
+      "id": 6,
+      "type": "header",
+      "level": "2",
+      "position": 6,
+      "value": "Ключевые достижения"
+    },
+    {
+      "id": 7,
+      "type": "paragraph",
+      "position": 7,
+      "value": "За отчётный период компания успешно реализовала три крупных проекта, привлекла 5 новых стратегических партнёров и расширила штат сотрудников на 20 %."
+    }
+  ],
+  "category": {
+    "id": "f8a3e1c9-7b2d-4c6e-9a5f-1d8e2c7a4b3f",
+    "title": "Финансовые отчёты",
+    "countDocuments": 15
+  }
 }

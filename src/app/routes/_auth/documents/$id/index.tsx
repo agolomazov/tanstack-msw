@@ -1,4 +1,5 @@
 import { useGetDocumentById } from '@api-queries/documents/use-get-document-by-id';
+import { Document } from '@entities/documents';
 import { DocumentSkeleton } from '@entities/documents/ui/document-skeleton';
 import { createFileRoute, useParams } from '@tanstack/react-router'
 import { ErrorLoadingState } from '@widgets/errors/error-loading';
@@ -30,5 +31,9 @@ function RouteComponent() {
     <NotFound />
   }
 
-  return <div>Document profile page</div>
+  return (
+    <>
+      <Document document={documentInfo!} />
+    </>
+  )
 }

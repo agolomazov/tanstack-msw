@@ -12,7 +12,7 @@ export const DocumentType: FC<Props> = ({ type }) => {
       'bg-green-100 text-green-800 border border-green-200': type === 'PUBLIC',
       'bg-red-100 text-red-800 border border-red-200': type === 'PRIVATE',
     })}>
-      {type === 'PUBLIC' ? 'Публиченый' : 'Приватный'}
+      {type === 'PUBLIC' ? 'Публичный' : 'Приватный'}
     </span>
   );
 }

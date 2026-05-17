@@ -1,6 +1,10 @@
 import type { DocumentMetaDtoV1 } from "@api/types";
 import type { FC } from "react";
 import { DocumentType } from "./document-status";
+import { Link } from "@tanstack/react-router";
+
+import { FaRegCommentDots } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 interface Props {
   document: DocumentMetaDtoV1;
@@ -42,23 +46,21 @@ export const DocumentCard: FC<Props> = ({ document: { createdBy, title, type, cr
       </div>
 
       {/* Количество комментариев */}
-      <div className="flex items-center gap-1 text-sm text-gray-600">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          className="w-4 h-4"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M8 12h.01M12 12h.01M16 12h.01"
-          />
-        </svg>
+      <div className="flex items-center gap-1 text-sm text-gray-600 mb-4">
+        <FaRegCommentDots />
         <span>{comments} комментариев</span>
       </div>
+
+      {/* Кнопка для перехода на страницу документа */}
+      <Link
+        to="/"
+        className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors gap-x-2"
+        aria-label={`Открыть документ "${title}"`}
+      >
+        <span>Открыть документ</span>
+        <FiExternalLink />
+      </Link>
+
     </div>
   );
 }

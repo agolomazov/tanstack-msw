@@ -100,7 +100,7 @@ export const documentsCategoryResponseMocks: DocumentCategoryResponseV1 = {
         "id": 12,
         "firstName": "Ольга",
         "lastName": "Петрова",
-        "avatarUrl": "https://i.pravatar.cc/150"
+        "avatarUrl": "http://localhost:5173/avatars/man.png"
       }
     },
     {
@@ -114,7 +114,7 @@ export const documentsCategoryResponseMocks: DocumentCategoryResponseV1 = {
         "id": 25,
         "firstName": "Алексей",
         "lastName": "Сидоров",
-        "avatarUrl": "https://i.pravatar.cc/150"
+        "avatarUrl": "http://localhost:5173/avatars/woman.png"
       }
     },
     {
@@ -128,7 +128,7 @@ export const documentsCategoryResponseMocks: DocumentCategoryResponseV1 = {
         "id": 33,
         "firstName": "Мария",
         "lastName": "Козлова",
-        "avatarUrl": "https://i.pravatar.cc/150"
+        "avatarUrl": "http://localhost:5173/avatars/panda.png"
       }
     },
     {
@@ -142,7 +142,7 @@ export const documentsCategoryResponseMocks: DocumentCategoryResponseV1 = {
         "id": 7,
         "firstName": "Виктор",
         "lastName": "Морозов",
-        "avatarUrl": "https://i.pravatar.cc/150"
+        "avatarUrl": "http://localhost:5173/avatars/boy.png"
       }
     },
     {
@@ -156,7 +156,7 @@ export const documentsCategoryResponseMocks: DocumentCategoryResponseV1 = {
         "id": 18,
         "firstName": "Татьяна",
         "lastName": "Волкова",
-        "avatarUrl": "https://i.pravatar.cc/150"
+        "avatarUrl": "http://localhost:5173/avatars/girl.png"
       }
     }
   ]

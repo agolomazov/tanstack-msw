@@ -1,11 +1,20 @@
 import { useGetDocumentsCategoryById } from '@api-queries/documents/use-get-documents-category-by-id'
 import { CategoryDocumentsSkeleton, DocumentCategory } from '@entities/documents';
-import { createFileRoute, useParams } from '@tanstack/react-router'
+import { documentCategoryPathParamsSchema } from '@pages/auth/documents/document-params';
+import { createFileRoute, notFound, useParams } from '@tanstack/react-router'
 import { ErrorLoadingState } from '@widgets/errors/error-loading';
 import { NotFound } from '@widgets/errors/not-found';
 
 export const Route = createFileRoute('/_auth/documents/category/$categoryId')({
   component: RouteComponent,
+  beforeLoad: ({ params }) => {
+    const result = documentCategoryPathParamsSchema.safeParse(params);
+
+    if (!result.success) {
+      throw notFound()
+    }
+  },
+  notFoundComponent: () => <NotFound />
 })
 
 function RouteComponent() {

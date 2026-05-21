@@ -1,0 +1,33 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "example_message": "Guten Tag {username}",
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "service": "Service",
+    "contacts": "Kontakt",
+    "documents": "Dokumente"
+  },
+  "pages": {
+    "documents": {
+      "list_title": "Dokumentkategorien",
+      "document_count": "{count, plural, one {document} other {documents}}"
+    }
+  },
+  "some_happy_cat": [{
+    "declarations": ["input count", "local countPlural = count: plural"],
+    "selectors": ["countPlural"],
+    "match": {
+      "countPlural=one": "Es gibt eine Katze.",
+      "countPlural=other": "Es gibt viele Katzen."
+    }
+  }],
+  "documents_count": [{
+    "declarations": ["input count", "local count = count: plural"],
+    "selectors": ["count"],
+    "match": {
+      "count=1": "Es gibt ein Dokument.",
+      "count=*": "Es gibt {count} Dokumente."
+    }
+  }]
+}

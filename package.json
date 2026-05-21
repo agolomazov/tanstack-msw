@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "post-generate": "tsx scripts/post-generate.ts",
-    "generate": "kubb generate && pnpm post-generate"
+    "generate": "kubb generate && pnpm post-generate",
+    "machine-translate": "inlang machine translate --project project.inlang"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
@@ -60,7 +61,9 @@
     "tsx": "^4.22.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "@inlang/paraglide-js": "^2.18.1",
+    "@inlang/cli": "^3.0.0"
   },
   "msw": {
     "workerDirectory": [

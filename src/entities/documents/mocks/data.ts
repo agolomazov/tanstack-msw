@@ -56,7 +56,7 @@ export const categoryListResponseMocks: DocumentCategoryListResponseV1 = {
     {
       id: "5fdd641e-e133-4f43-b639-2d170c6c4a55",
       title: "Проекты",
-      countDocuments: 2,
+      countDocuments: 1,
     },
   ],
 };

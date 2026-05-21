@@ -1,0 +1,24 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "example_message": "Hello world {username}",
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "service": "Service",
+    "contacts": "Contacts",
+    "documents": "Documents"
+  },
+  "pages": {
+    "documents": {
+      "list_title": "Document categories!!"
+    }
+  },
+  "documents_count": [{
+    "declarations": ["input count", "local count = count: plural"],
+    "selectors": ["count"],
+    "match": {
+      "count=1": "There is one document.",
+      "count=*": "There are {count} documents."
+    }
+  }]
+}

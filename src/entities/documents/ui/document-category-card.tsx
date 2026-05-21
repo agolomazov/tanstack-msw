@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router';
 import { type FC } from 'react';
+import { m } from '../../../paraglide/messages';
 
 interface Props {
   id: string;
@@ -40,7 +41,7 @@ export const DocumentCategoryCard: FC<Props> = ({ id, title, countDocuments }) =
               />
             </svg>
             <span className="text-sm text-gray-600">
-              {countDocuments} {countDocuments === 1 ? 'документ' : countDocuments >= 2 && countDocuments <= 4 ? 'документа' : 'документов'}
+              {m.documents_count({count: countDocuments})}
             </span>
           </div>
 

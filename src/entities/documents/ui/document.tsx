@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { Link } from "@tanstack/react-router";
 
 import type { DocumentBlockImageV1, DocumentBlockParagraphV1, DocumentBlockTitleV1, DocumentResponseV1 } from "@api/types";
 import { formatDate } from '@shared/libs/date';
@@ -8,7 +9,6 @@ import { DocumentTitle } from './document-title';
 import { DocumentImage } from './document-image';
 import { DocumentType } from "./document-status";
 import { FaRegCommentDots } from "react-icons/fa";
-import { Link } from "@tanstack/react-router";
 import { DocumentComments } from "./document-comments";
 
 interface Props {

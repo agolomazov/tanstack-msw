@@ -26,8 +26,13 @@
     "declarations": ["input count", "local count = count: plural"],
     "selectors": ["count"],
     "match": {
+      "count=0": "Keine Dokumente",
       "count=1": "Es gibt ein Dokument.",
       "count=*": "Es gibt {count} Dokumente."
     }
-  }]
+  }],
+  "no_category_documents": "In dieser Kategorie sind noch keine Dokumente vorhanden.",
+  "open_document_link": "Dokument öffnen",
+  "updated": "Aktualisiert",
+  "created": "Erstellt"
 }

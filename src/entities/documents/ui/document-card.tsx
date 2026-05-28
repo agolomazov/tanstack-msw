@@ -2,6 +2,7 @@ import type { DocumentMetaDtoV1 } from "@api/types";
 import type { FC } from "react";
 import { DocumentType } from "./document-status";
 import { Link } from "@tanstack/react-router";
+import { m } from '../../../paraglide/messages';
 
 import { FaRegCommentDots } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
@@ -41,8 +42,8 @@ export const DocumentCard: FC<Props> = ({ document: { createdBy, title, type, cr
 
       {/* Дата создания */}
       <div className="flex justify-between items-center text-sm text-gray-500 mb-3">
-        <span>Создан: {new Date(createdAt).toLocaleDateString('ru-RU')}</span>
-        {updatedAt && (<span>Обновлено: {new Date(updatedAt).toLocaleDateString('ru-RU')}</span>)}
+        <span>{m.created()}: {new Date(createdAt).toLocaleDateString('ru-RU')}</span>
+        {updatedAt && (<span>{m.updated()}: {new Date(updatedAt).toLocaleDateString('ru-RU')}</span>)}
       </div>
 
       {/* Количество комментариев */}
@@ -53,12 +54,14 @@ export const DocumentCard: FC<Props> = ({ document: { createdBy, title, type, cr
 
       {/* Кнопка для перехода на страницу документа */}
       <Link
-        to="/documents/$id"
-        params={{ id: String(id) }}
+        to="/documents/$documentId"
+        params={{ documentId: String(id) }}
         className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors gap-x-2"
         aria-label={`Открыть документ "${title}"`}
       >
-        <span>Открыть документ</span>
+        <span>
+          {m.open_document_link()}
+        </span>
         <FiExternalLink />
       </Link>
 

@@ -2,6 +2,7 @@ import type { DocumentCategoryV1, DocumentMetaDtoV1 } from "@api/types";
 import type { FC } from "react";
 
 import { DocumentCard } from './document-card';
+import { m } from "../../../paraglide/messages";
 
 interface Props {
   category: DocumentCategoryV1;
@@ -27,10 +28,7 @@ export const DocumentCategory: FC<Props> = ({ category, documents }) => {
           {/* Количество документов */}
           <div className="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full border border-blue-100">
             <span className="text-blue-600 font-medium">
-              {category?.countDocuments ?? 0}
-            </span>
-            <span className="text-blue-500 text-sm">
-              документов
+              {m.documents_count({ count: category.countDocuments })}
             </span>
           </div>
         </div>
@@ -45,7 +43,7 @@ export const DocumentCategory: FC<Props> = ({ category, documents }) => {
         ) : (
           <div className="col-span-full text-center py-8">
             <p className="text-gray-500 text-lg">
-              В этой категории пока нет документов
+              {m.no_category_documents()}
             </p>
           </div>
         )}

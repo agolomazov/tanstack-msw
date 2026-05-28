@@ -31,5 +31,15 @@ export default defineConfig({
       '@api/zod': path.resolve(__dirname, 'src/generate/api/zod'),
       '@route-tree': path.resolve(__dirname, 'src/generate/routes/route-tree.gen.ts')
     }
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 3000,
+    hmr: {
+      clientPort: 3000
+    },
+    watch: {
+      usePolling: true
+    }
   }
 })

@@ -5,6 +5,8 @@ export const Route = createFileRoute('/_unsigned')({
   beforeLoad: ({ context }) => {
     const { isLogged } = context.authentication;
 
+    console.log(isLogged);
+
     if (isLogged) {
       throw redirect({
         to: '/',

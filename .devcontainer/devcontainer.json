@@ -1,0 +1,55 @@
+{
+  "name": "ЛК Оператора Workspace",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "postCreateCommand": "yarn",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "streetsidesoftware.code-spell-checker",
+        "orta.vscode-ts-explain",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "randrade23.beautify-json",
+        "aaron-bond.better-comments",
+        "biomejs.biome",
+        "fill-labs.dependi",
+        "EditorConfig.EditorConfig",
+        "romerramos.elementarywatson",
+        "IronGeek.vscode-env",
+        "dsznajder.es7-react-js-snippets",
+        "eamodio.gitlens",
+        "heybourn.headwind",
+        "ecmel.vscode-html-css",
+        "nadim-vscode.html-meta-tags-hero",
+        "wix.vscode-import-cost",
+        "ms-vscode.vscode-typescript-next",
+        "ClemensPeters.format-json",
+        "adamvoss.vscode-languagetool",
+        "christian-kohler.npm-intellisense",
+        "ionutvmi.path-autocomplete",
+        "christian-kohler.path-intellisense",
+        "csstools.postcss",
+        "rvest.vs-code-prettier-eslint",
+        "MylesMurphy.prettify-ts",
+        "YoavBls.pretty-ts-errors",
+        "inlang.vs-code-extension",
+        "stylelint.vscode-stylelint",
+        "wayou.vscode-todo-highlight",
+        "vitest.explorer"
+      ],
+      "settings": {
+        "js/ts.tsdk.path": "node_modules/typescript/lib",
+        "editor.formatOnSave": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "postAttachCommand": "yarn dev",
+  "forwardPorts": [5173]
+}

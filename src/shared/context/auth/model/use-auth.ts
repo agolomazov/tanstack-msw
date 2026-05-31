@@ -9,5 +9,8 @@ export const useAuth = () =>  {
     throw new Error('useAuth должен использоваться внутри AuthProvider');
   }
 
-  return context;
+  return {
+    ...context,
+    isLogged: true,
+  };
 }

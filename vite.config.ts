@@ -8,7 +8,8 @@ import path from 'node:path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [paraglideVitePlugin({ project: './project.inlang', outdir: './src/paraglide', strategy: ['localStorage', 'cookie', 'preferredLanguage'] }),
+  plugins: [
+    paraglideVitePlugin({ project: './project.inlang', outdir: './src/paraglide', strategy: ['localStorage', 'cookie', 'preferredLanguage'] }),
     tailwindcss(),
     tanstackRouter({
       target: 'react',
@@ -30,6 +31,16 @@ export default defineConfig({
       '@api/types': path.resolve(__dirname, 'src/generate/api/types'),
       '@api/zod': path.resolve(__dirname, 'src/generate/api/zod'),
       '@route-tree': path.resolve(__dirname, 'src/generate/routes/route-tree.gen.ts')
+    }
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    hmr: {
+      clientPort: 5173
+    },
+    watch: {
+      usePolling: true
     }
   }
 })
